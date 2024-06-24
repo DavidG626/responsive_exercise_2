@@ -1,0 +1,124 @@
+/* colors #f46106 #315470 */
+
+:root {
+    --main-radius: 5px;
+    --main-padding: 5px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.5fr .2fr 1.2fr .8fr;
+    grid-template-areas:
+    "main main main main"
+    "nav nav nav nav"
+    "content1 content2 content3 content4"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+    color: #ffff;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: center;
+}
+
+main {
+    
+    grid-area: main;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+    text-align: center;
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 2rem;
+}
+
+.navbar li a {
+    color: #ffff;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+.navbar li a:hover {
+    color: #f46106;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: #ffff;
+    transition: 0.5s ease;
+    
+}
+
+#content1 {
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+
+}
+
+#content2 {
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+
+}
+
+#content3 {
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+
+}
+
+#content4 {
+    grid-area: content4;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+
+}
+
+#footer {
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background-color: #315470;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2.2fr 0.4fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "main"
+        "nav"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "footer";
+    }
+}
